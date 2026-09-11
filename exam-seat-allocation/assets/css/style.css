@@ -1,0 +1,86 @@
+:root {
+  --primary: #2f4b7c;
+  --primary-dark: #1f3557;
+  --accent: #ef6c00;
+}
+
+body {
+  background: #f4f6fa;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+}
+
+.nav-link.active {
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.stat-card {
+  border-radius: 12px;
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+}
+.stat-card .stat-num { font-size: 2rem; font-weight: 700; }
+.stat-card.bg-a { background: linear-gradient(135deg,#2f4b7c,#3f6fb0); }
+.stat-card.bg-b { background: linear-gradient(135deg,#0f766e,#14b8a6); }
+.stat-card.bg-c { background: linear-gradient(135deg,#b45309,#f59e0b); }
+.stat-card.bg-d { background: linear-gradient(135deg,#6d28d9,#a78bfa); }
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* ---- Seating grid ---- */
+.hall-block { margin-bottom: 2.5rem; }
+.seat-grid {
+  display: grid;
+  gap: 8px;
+}
+.seat {
+  border-radius: 8px;
+  padding: 6px 4px;
+  text-align: center;
+  font-size: 0.72rem;
+  line-height: 1.15;
+  color: #fff;
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.seat .seat-reg { font-weight: 700; font-size: 0.75rem; }
+.seat .seat-dept { opacity: .9; }
+.seat.empty { background: #e5e7eb; color: #9ca3af; }
+
+/* department colour classes assigned dynamically via inline style using data attr - fallback palette */
+.dept-color-0 { background:#2f4b7c; }
+.dept-color-1 { background:#0f766e; }
+.dept-color-2 { background:#b45309; }
+.dept-color-3 { background:#6d28d9; }
+.dept-color-4 { background:#be123c; }
+.dept-color-5 { background:#0369a1; }
+.dept-color-6 { background:#4d7c0f; }
+.dept-color-7 { background:#a21caf; }
+
+@media print {
+  .navbar, footer, .no-print { display: none !important; }
+  body { background: #fff; }
+  .seat { color: #000 !important; border: 1px solid #999; }
+  .dept-color-0,.dept-color-1,.dept-color-2,.dept-color-3,.dept-color-4,.dept-color-5,.dept-color-6,.dept-color-7 {
+    background: #fff !important;
+  }
+}
