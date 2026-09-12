@@ -3,7 +3,7 @@
 -- Database Schema  (MySQL / phpMyAdmin / XAMPP)
 -- =====================================================================
 
-CREATE DATABASE IF NOT EXISTS exam_seat_db;
+--CREATE DATABASE IF NOT EXISTS exam_seat_db;
 USE exam_seat_db;
 
 -- ---------------------------------------------------------------------
