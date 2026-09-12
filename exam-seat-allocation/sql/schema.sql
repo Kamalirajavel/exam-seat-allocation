@@ -3,8 +3,7 @@
 -- Database Schema  (MySQL / phpMyAdmin / XAMPP)
 -- =====================================================================
 
---CREATE DATABASE IF NOT EXISTS exam_seat_db;
-USE exam_seat_db;
+
 
 -- ---------------------------------------------------------------------
 -- Staff / Admin login
